@@ -7,4 +7,8 @@ lazy val root = (project in file("."))
     name := "retirement_simulator"
   )
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.19"
+libraryDependencies ++= Seq(
+  "org.scalatest" %% "scalatest" % "3.2.19",
+  "org.typelevel" %% "cats-core" % "2.12.0"
+)
+
