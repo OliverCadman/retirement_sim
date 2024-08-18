@@ -43,9 +43,6 @@ object SimulatePlanApp extends App {
       val vFromUntil = parseFromUntil(args(0))
       val vNYearsSaving = parseDouble("nYearsSaving", args(1))
       val vParams = parseParams(args)
-      println(vFromUntil)
-      println(vNYearsSaving)
-      println(vParams)
 
       (vFromUntil, vNYearsSaving, vParams)
         .tupled
@@ -69,6 +66,6 @@ object SimulatePlanApp extends App {
            |The capital you will have saved before retiring: £${capitalAfterRetirement.round}
            |Your remaining capital once retirement is over: £${capitalAfterDeath.round}
            |""".stripMargin
-    }.toValidatedNel
+    }
   }
 }
